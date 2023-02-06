@@ -280,16 +280,25 @@ public class AssignmentDayOne {
 		System.out.println();
 		k = sc.nextInt();
 		StringBuffer sb = new StringBuffer();
+		boolean isNum = false;
 		for (int i = 0; i < n; i++) {
 			if (arr[i] == k) {
+				isNum = true;
 				if (s == 0) {
 					sb.append("vi tri xuat hien cua phan tu: " + k + " la: ");
 				}
 				sb.append(i+1).append(",");
 				s++;
+			}else {
+				isNum = false;
+//				sb.append("khong xuat hien phan tu: " + k + " trong mang. ");
 			}
 		}
-		sb.replace(sb.length()-1, sb.length(), "");
+		if (isNum) {
+			sb.replace(sb.length()-1, sb.length(), "");			
+		} else {
+			System.out.println("khong xuat hien phan tu: " + k + " trong mang. ");
+		}
 		
 		System.out.println(sb.toString());
 		System.out.println();
@@ -313,29 +322,27 @@ public class AssignmentDayOne {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Nhap vao phan tu K can chen: ");
 		int k = sc.nextInt();
-        int arrIndex = arr.length - 1;
-        int tempIndex = arr.length;
-        int [] tempArr = new int [tempIndex + 1];
-        boolean inserted = false;
+        int n = arr.length;
+        int[] result = new int[n + 1];
         
         System.out.println("Mang sau khi sap xep tang dan la: ");
         sortASC(arr);
         show(arr);
-         
-        for (int i = tempIndex; i >= 0; i--) {
-            if (arrIndex > -1 && arr[arrIndex] > k) {
-                tempArr[i] = arr[arrIndex--];
-            } else {
-                if (!inserted) {
-                    tempArr[i] = k;
-                    inserted = true;
-                } else {
-                    tempArr[i] = arr[arrIndex--];
-                }
-            }
+        
+        int i = 0;
+        while (i < n && arr[i] < k) {
+            result[i] = arr[i];
+            i++;
         }
+
+        result[i] = k;
+        while (i < n) {
+            result[i + 1] = arr[i];
+            i++;
+        }
+        
         System.out.println("Mang sau khi sap xep tang dan va chen phan tu k = " + k + " ( van dam bao mang tang dan ) la: ");
-        show(tempArr);
+        show(result);
     }
 	
 	public static void show(int [] arr) {
