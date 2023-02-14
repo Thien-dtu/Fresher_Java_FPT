@@ -1,0 +1,28 @@
+2023-02-09 23:02:56 INFO  Solution:70 - success
+2023-02-09 23:03:00 WARN  Solution:55 - com.microsoft.sqlserver.jdbc.SQLServerException: The column name , is not valid.
+com.microsoft.sqlserver.jdbc.SQLServerException: The column name , is not valid.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:237)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.findColumn(SQLServerResultSet.java:718)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.getString(SQLServerResultSet.java:2544)
+	at main.java.com.service.CandidateService.findAllByString(CandidateService.java:51)
+	at main.java.com.controller.Solution.displayListByString(Solution.java:62)
+	at main.java.com.controller.Solution.main(Solution.java:39)
+2023-02-10 00:20:05 WARN  Solution:55 - The column name , is not valid.
+2023-02-10 00:20:12 INFO  Solution:70 - success
+2023-02-10 08:29:41 WARN  Solution:58 - The column name , is not valid.
+2023-02-10 08:32:19 INFO  Solution:71 - success
+2023-02-10 08:32:22 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:32:37 INFO  Solution:71 - success
+2023-02-10 08:32:38 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:34:06 INFO  Solution:71 - success
+2023-02-10 08:34:08 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:34:28 INFO  Solution:71 - success
+2023-02-10 08:34:30 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:38:46 INFO  Solution:71 - success
+2023-02-10 08:38:48 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:47:47 INFO  Solution:71 - success
+2023-02-10 08:47:48 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:49:45 INFO  Solution:71 - success
+2023-02-10 08:50:30 WARN  Solution:56 - The column name , is not valid.
+2023-02-10 08:56:17 INFO  Solution:54 - success
+2023-02-10 10:26:32 INFO  Solution:33 - user log

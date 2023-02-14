@@ -8,7 +8,7 @@ create table CANDIDATE(
     phone varchar(45),
     email varchar(45),
     candidateType int,
-	certificatedId varchar(45),
+--certificatedId varchar(45),
     expInYear int,
     proSkill varchar(255),
     graduationDate date,
@@ -18,16 +18,15 @@ create table CANDIDATE(
     semester varchar(255),
     universityName varchar(255)
 );
-create table CHUNGCHI(
-	certificatedId varchar(45) not null primary key,
-    certificateName varchar(255),
-    certificateRank varchar(255),
-    certificatedDate date
+
+Create table CERTIFICATED(
+certificatedId INT not null primary KEY IDENTITY(1,1),
+certificatedName varchar(50),
+certificatedRank varchar(30),
+certificatedDate date,
+candidateId varchar(45) foreign key references CANDIDATE(candidateId)
 );
-create table cer_candi(
-	candidateId varchar(45),
-    certificatedId varchar(45),
-    primary key(candidateId, certificatedId),
-    foreign key(candidateId) references candidate(candidateId),
-    foreign key(certificatedId) references CHUNGCHI(certificatedId)
-);
+
+SELECT * FROM dbo.CANDIDATE
+
+SELECT * FROM CERTIFICATED
