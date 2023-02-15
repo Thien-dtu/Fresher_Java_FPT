@@ -125,8 +125,7 @@ public class Solution {
 			return;
 		}
 
-		Map<String, String> result = InputDataImportByUser.getDataChangeFromUser(scanner, displayViewForUser,
-				candidate);
+		Map<String, String> result = InputDataImportByUser.getDataChangeFromUser(scanner, displayViewForUser, candidate);
 
 		if (result.isEmpty()) {
 			System.out.println("Không thay đổi gì cả!!!");

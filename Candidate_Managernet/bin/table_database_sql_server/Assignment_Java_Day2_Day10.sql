@@ -1,9 +1,9 @@
-Drop database if exists Assignment_Candidate_Managerment;
-Create database Assignment_Candidate_Managerment;
-Use Assignment_Candidate_Managerment;
+DROP DATABASE IF EXISTS Assignment_Candidate_Managerment;
+CREATE DATABASE Assignment_Candidate_Managerment;
+USE Assignment_Candidate_Managerment;
 
-Create table Candidate(
-Candidate_ID int primary key identity(1,1),
+CREATE TABLE Candidate(
+Candidate_ID int PRIMARY KEY IDENTITY(1,1),
  Full_Name varchar(50),
  Birth_Day date,
  Phone int,
@@ -22,7 +22,7 @@ Candidate_ID int primary key identity(1,1),
  University_Name varchar(100),
 );
 
-Create table Certificated(
+CREATE table Certificated(
 Certificated_ID int primary key identity(1,1),
 Certificated_Name varchar(50),
 Certificated_Rank varchar(30),
